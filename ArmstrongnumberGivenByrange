@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+
+    int n,i,n1,n2,ctr=0,sum=0,rem;
+    printf("Enter  a number\n");
+    scanf("%d",&n1);
+
+    for(i=1;i<n1;i++)
+    {
+        n=i;
+        n2=n;
+    while(n>0)
+    {
+        rem=n%10;
+        ctr++;
+        n/=10;
+    }
+    n=n2;
+    while(n>0){
+        rem=n%10;
+        sum+=pow(rem,ctr);
+        n/=10;
+    }
+
+    if(n2==sum)
+    {
+        printf(" %d ",i);
+
+    }
+    ctr=0;
+    sum=0;
+
+    }
+}
+
+
+
